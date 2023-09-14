@@ -1,0 +1,177 @@
+@import "../helpers/mixin";
+
+.about_us{
+    padding: 310px 0px 235px 0px;
+    .container{
+        .about_usBox{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            @media screen  and (max-width:1000px){
+                gap: 50px 0px;
+            }
+            .about_us-text{
+                max-width: 321px;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                margin-right: 88px;
+                padding-top: 50px;
+                @media screen  and (max-width:1000px){
+                    text-align: center;
+                    margin-right: 0px;
+                    margin-top: -200px;
+                }
+                h3{
+                    @include whiteText(72px,700,110%,-1.44px);
+                    @include bigWhiteText;
+                    font-family: Noe Display;
+                }
+                .about_us-button{
+                    margin: 0 auto;
+                    @media screen  and (max-width:1000px){
+                        text-align: center;
+                    }
+                    display: flex;
+                    button{
+                        border-radius: 48px;
+                        background: #00C9E0;
+                        border: none;
+                        padding: 21px 57px;
+                        cursor: pointer;
+                        @include whiteText(13px,400,150%,2.1px);
+                        text-transform: uppercase;
+                        font-family: Larsseit;
+                        transition: .3s;
+                        @media screen and (max-width:454px) {
+                            font-size: 10px;
+                            @include whiteText(10px,400,110%,1.4px);
+                            padding: 17px 47px;
+                        }
+                        @media screen and (max-width:370px) {
+                            font-size: 8px;
+                            @include whiteText(8px,400,90%,0.5px);
+                            padding: 14px 39px;
+                        }
+                    }
+                    button:hover{
+                        box-shadow: 0px 0px 40px 10px rgba(0, 201, 224, 0.20);
+                    }
+                    .about_us-btnLine{
+                        position: relative;
+                        right: 15px;
+                        top: 31px;
+                        width: 30px;
+                        height: 2px;
+                        border-radius: 16px;
+                        background: #FFF;
+                        @media screen and (max-width:454px) {
+                            top: 22px;
+                        }
+                        @media screen and (max-width:370px) {
+                            top: 18px;
+                        }
+                    }
+                }
+                div{
+                    @media screen  and (max-width:1000px){
+                        text-align: center;
+                    }
+                    h5{
+                        @include whiteText(18px,700,150%,-0.36px);
+                        @include littleWhiteText;
+                        font-family: Larsseit;
+                    }
+                    p{
+                        padding: 6px 0px;
+                        margin: 15px 0px;
+                        @include whiteText(18px,300,150%,-0.36px);
+                        @include littleWhiteText;
+                        font-family: Larsseit;
+                        opacity: 0.5;
+                    }
+                }
+            }
+            .about_us-Right{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                .about_us-photos{
+                    margin-top: 15px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    max-width: 790px;
+                    @media screen  and (max-width:1000px){
+                        gap: 15px;
+                    }
+                    div{
+                        position: relative;
+                        max-height: 395px;
+                        h5{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 25px 30px;
+                            @media screen  and (max-width:800px){
+                                padding: 20px 25px;
+                                font-size: 13px;
+                            }
+                            @media screen  and (max-width:450px){
+                                padding: 15px 20px;
+                                font-size: 12px;
+                                left: -12px;
+                            }
+                            background-color: white;
+                            border-radius: 10px;
+                            position: absolute;
+                            bottom: 50px;
+                            left: -25px;
+                            @include whiteText(15px,700,150%,0.75px);
+                            font-family: Larsseit;
+                            color: #000;
+                            opacity: 0;
+                            span{
+                                @include whiteText(15px,700,150%,0.75px);
+                                color: #00C9E0;
+                                font-family: Larsseit;
+                                @media screen  and (max-width:800px){
+                                    font-size: 13px;
+                                }
+                                @media screen  and (max-width:450px){
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    div:hover{
+                        h5{
+                            opacity: 1;
+                            transition: .4s;
+                        }
+                        img{
+                            opacity: 1;
+                            transition: .4s;
+                        }
+                    }
+                    img{
+                        max-width: 100%;
+                        opacity: .4;
+                    }
+                }
+                .about_us-dots{
+                    margin-left: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 70px;
+                    gap: 10px;
+                    @media screen and (max-width:1306px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

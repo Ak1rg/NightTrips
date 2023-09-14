@@ -1,0 +1,40 @@
+<svg width="70" height="110" viewBox="0 0 70 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Dots">
+<g id="Row 1">
+<circle id="Ellipse 1" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 70 0)" fill="#41EAD4"/>
+<circle id="Ellipse 2" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 50 0)" fill="#41EAD4"/>
+<circle id="Ellipse 3" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 30 0)" fill="#41EAD4"/>
+<circle id="Ellipse 4" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 10 0)" fill="#41EAD4"/>
+</g>
+<g id="Row 2">
+<circle id="Ellipse 1_2" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 70 20)" fill="#41EAD4"/>
+<circle id="Ellipse 2_2" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 50 20)" fill="#41EAD4"/>
+<circle id="Ellipse 3_2" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 30 20)" fill="#41EAD4"/>
+<circle id="Ellipse 4_2" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 10 20)" fill="#41EAD4"/>
+</g>
+<g id="Row 3">
+<circle id="Ellipse 1_3" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 70 40)" fill="#41EAD4"/>
+<circle id="Ellipse 2_3" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 50 40)" fill="#41EAD4"/>
+<circle id="Ellipse 3_3" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 30 40)" fill="#41EAD4"/>
+<circle id="Ellipse 4_3" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 10 40)" fill="#41EAD4"/>
+</g>
+<g id="Row 4">
+<circle id="Ellipse 1_4" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 70 60)" fill="#41EAD4"/>
+<circle id="Ellipse 2_4" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 50 60)" fill="#41EAD4"/>
+<circle id="Ellipse 3_4" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 30 60)" fill="#41EAD4"/>
+<circle id="Ellipse 4_4" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 10 60)" fill="#41EAD4"/>
+</g>
+<g id="Row 5">
+<circle id="Ellipse 1_5" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 70 80)" fill="#41EAD4"/>
+<circle id="Ellipse 2_5" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 50 80)" fill="#41EAD4"/>
+<circle id="Ellipse 3_5" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 30 80)" fill="#41EAD4"/>
+<circle id="Ellipse 4_5" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 10 80)" fill="#41EAD4"/>
+</g>
+<g id="Row 6">
+<circle id="Ellipse 1_6" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 70 100)" fill="#41EAD4"/>
+<circle id="Ellipse 2_6" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 50 100)" fill="#41EAD4"/>
+<circle id="Ellipse 3_6" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 30 100)" fill="#41EAD4"/>
+<circle id="Ellipse 4_6" cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 10 100)" fill="#41EAD4"/>
+</g>
+</g>
+</svg>

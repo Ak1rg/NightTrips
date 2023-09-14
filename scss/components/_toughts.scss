@@ -1,0 +1,166 @@
+@import "../helpers/mixin";
+
+
+.toughts{
+    .toughts__container{
+        max-width: 1680px;
+        margin: 0 auto;
+        border-radius: 8px;
+        background: #011627;
+        .toughts_box{
+            position: relative;
+            .toughts-line{
+                z-index: 15;
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                margin-left: 5px;
+                width: 2px;
+                height: 80px;
+                border-radius: 13px;
+                background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);
+                opacity: .8;
+            }
+            .toughts_upperText{
+                max-width: 545px;
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                padding-top: 100px;
+                gap: 31px;
+                text-align: center;
+                h2{
+                    @include whiteText(72px,700,110%,-1.44px);
+                    @include bigWhiteText;
+                    font-family: Noe Display;
+                    @media screen  and (max-width:340px){
+                        font-size: 40px;
+                    }
+                }
+                h4{
+                    @include whiteText(24px,700,150%,3.6px);
+                    @include littleWhiteText;
+                    font-family: Larsseit;
+                }
+            }
+            .toughts_cards{
+                padding: 73px 0px 150px 0px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+                max-width: 1046px;
+                margin: 0 auto;
+                .toughts-card{
+                    position: relative;
+                    max-width: 510px;
+                    min-height: 504px;
+                    border-radius: 5px;
+                    background: #02223B;
+                    box-shadow: 0px 20px 30px 0px rgba(0, 201, 224, 0.03);
+                    @media screen  and (max-width:1000px){
+                        width: 92%;;
+                    }
+                    .comma{
+                        position: absolute;
+                        left: 10%;
+                        top: 15%;
+                        @media screen  and (max-width:681px){
+                            left: 9%;
+                        }
+                    }
+                    .tought-card_text{
+                        padding: 75px 74px 102px 102px;
+                        @media screen  and (max-width:681px){
+                            padding:75px 74px 70px 90px ;
+                        }
+                        @media screen  and (max-width:501px){
+                            padding:75px 40px 60px 80px ;
+                        }
+                        @media screen  and (max-width:461px){
+                            padding:70px 40px 60px 80px ;
+                        }
+                        @media screen  and (max-width:380px){
+                            padding:65px 40px 60px 70px ;
+                        }
+                        display: flex;
+                        flex-direction: column;
+                        gap: 25px;
+                        .tought-card-upperText{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 12px;
+                            h5{
+                                @include whiteText(18px,400,190%,0px);
+                                font-family: Larsseit;
+                                @media screen and (max-width:550px) {
+                                    font-size: 16px;
+                                }
+                                @media screen and (max-width:320px) {
+                                    font-size: 14px;
+                                }
+                            }
+                            p{
+                                @include whiteText(18px,300,190%,0px);
+                                font-family: Larsseit;
+                                opacity: 0.7;
+                                @media screen and (max-width:500px) {
+                                    font-size: 17px;
+                                }
+                                @media screen and (max-width:340px) {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                        .tougth-card_userLine{
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                            img{
+                                border-radius: 7px;
+                            }
+                            div{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 6px;
+                                h6{
+                                    @include whiteText(12px,300,110%,3.6px);
+                                    @include littleWhiteText;
+                                    font-family: Larsseit;
+                                    @media screen  and (max-width:680px){
+                                        font-size: 12px;
+                                    }
+                                    @media screen  and (max-width:550px){
+                                        font-size: 10px;
+                                    }
+                                    @media screen  and (max-width:340px){
+                                        font-size: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .toughts_bottomText{
+                display: flex;
+                flex-direction: column;
+                gap: 31px;
+                text-align: center;
+                align-items: center;
+                padding-bottom: 138px;
+                h2{
+                    @include whiteText(72px,700,110%,-1.44px);
+                    @include bigWhiteText;
+                    font-family: Noe Display;
+                }
+                h3{
+                    max-width: 388px;
+                    @include whiteText(24px,700,150%,1.68px);
+                    @include littleWhiteText;
+                    font-family: Larsseit;
+                }
+            }
+        }
+    }
+}

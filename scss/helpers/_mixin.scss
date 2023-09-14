@@ -1,0 +1,26 @@
+@mixin whiteText ($size,$weight,$height,$spacing) {
+    color: #FFF;
+    font-size: $size;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+}
+
+@mixin bigWhiteText {
+    @media screen and (max-width:680px) {
+        font-size: 58px;
+    }
+    @media screen and (max-width:450px) {
+        font-size: 48px;
+    }
+}
+
+@mixin littleWhiteText {
+    @media screen and (max-width:680px) {
+        font-size: 14px;
+    }
+    @media screen and (max-width:450px) {
+        font-size: 12px;
+    }
+}

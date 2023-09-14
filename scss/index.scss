@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.background{
+    background-image: url(../img/background.png);
+    background-position-y:top ;
+    background-position-x:center;
+}
+
+.container{
+    max-width: 1391px;
+    margin: 0 auto;
+    @media screen  and (max-width:1400px){
+        width: 98%;
+    }
+    @media screen  and (max-width:800px){
+        width: 90%;
+    }
+}
+
+@import url(https://db.onlinewebfonts.com/c/30a71dcf9a1c39558ca4e97c92a4b2fa?family=NoeDisplay-Bold);
+@import url('https://fonts.cdnfonts.com/css/larsseit-font-family');
+
+@import "./components/header";
+@import "./components/trip";
+@import "./components/aboutUs";
+@import "./components/toughts";
+@import "./components/_footer";

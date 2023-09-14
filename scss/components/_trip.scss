@@ -1,0 +1,253 @@
+@import "../helpers/mixin";
+
+.trip{
+    .container{
+        .trip_header{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 83px;
+            display: flex;
+            align-items: center;
+            gap: 33px;
+            @media  screen and (max-width:851px) {
+                flex-direction: column;
+            }
+            h2{
+                @include whiteText(72px,700,110%,-1.44px);
+                font-family: Noe Display;
+                @include bigWhiteText;
+            }
+            img{
+                position: relative;
+                top: 8px;
+            }
+            p{
+                position: relative;
+                top: 8px;
+                @include whiteText(16px,400,150%,-0.32px);
+                font-family: Larsseit;
+                max-width: 300px;
+                text-align: center;
+                @include littleWhiteText;
+            }
+        }
+        .trip_buttons{
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 150px;
+            @media  screen and (max-width:800px) {
+                display: none;
+            }
+            .trip_button{
+                flex-direction: column;
+                justify-content: space-between;
+                display: flex;
+                gap: 33px;
+                height: 55px;
+                margin-top: 20px;
+                cursor: pointer;
+                h4{
+                    @include whiteText(16px,400,110%,-0.32px);
+                    font-family: Larsseit;
+                    opacity: 0.5;
+                    text-align: center;
+                }
+                .trip_button-line{
+                    width: 300px;
+                    height: 2px;
+                    border-radius: 13px;
+                    background: #fff;
+                    opacity: .5;
+                }
+            }
+            .trip_button:hover{
+                h4{
+                    @include whiteText(18px,700,110%,-0.36px);
+                    font-family: Larsseit;
+                    color: #41EAD4;
+                    opacity: 1;
+                    transition: 0.2s;
+                }
+                .trip_button-line{
+                    background-color: #41EAD4;
+                    opacity: 1;
+                    transition: 0.2s;
+                }
+            }
+            .trip_button.active{
+                h4{
+                    @include whiteText(18px,700,110%,-0.36px);
+                    font-family: Larsseit;
+                    color: #41EAD4;
+                    opacity: 1;
+                }
+                .trip_button-line{
+                    background-color: #41EAD4;
+                    opacity: 1;
+                }
+            }
+        }
+        .trip_slider{
+            max-width: 1200px;
+            margin: 0 auto;
+            .swiper{
+                max-width: 100%;
+                z-index: 12;
+                position: relative;
+                @media screen and (max-width:1200px) {
+                    max-width: 100%;
+                }
+                .trip_slide{
+                    max-width: 1200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    img{
+                        border-radius: 10px;
+                        background: #C4C4C4;
+                        max-width: 100%;
+                    }
+                    .trip_slide-text{
+                        margin: 0 auto;
+                        max-width: 485px;
+                        h3{
+                            @include whiteText(65px,700,110%,-1.3px);
+                            font-family: Noe Display;
+                            @include bigWhiteText;
+                            margin-top: 15px;
+                            @media screen and (max-width:350px) {
+                                font-size: 40px;
+                            }
+                        }
+                        h5{
+                            padding-top: 35px;
+                            @include whiteText(17px,400,150%,-0.34px);
+                            font-family: Larsseit;
+                            @media screen and (max-width:600px) {
+                                font-size: 13px;
+                            }
+                        }
+                        p{
+                            padding-top: 20px;
+                            @include whiteText(17px,400,150%,-0.34px);
+                            color: #C4C4C4;
+                            font-family: Larsseit;
+                            @media screen and (max-width:600px) {
+                                font-size: 13px;
+                            }
+                        }
+                        .trip__button{
+                            padding-top: 45px;
+                            button{
+                                border-radius: 48px;
+                                background: #00C9E0;
+                                border: none;
+                                padding: 21px 57px;
+                                cursor: pointer;
+                                @include whiteText(16px,700,100%,1.6px);
+                                text-transform: uppercase;
+                                font-family: Larsseit;
+                                transition: .3s;
+                                @media screen and (max-width:400px) {
+                                    font-size: 13px;
+                                }
+                                @media screen and (max-width:360px) {
+                                    font-size: 10px;
+                                }
+                            }
+                            button:hover{
+                                box-shadow: 0px 0px 40px 10px rgba(0, 201, 224, 0.20);
+                            }
+                            .trip_line{
+                                position: relative;
+                                right: -299px;
+                                top: -31px;
+                                width: 30px;
+                                height: 2px;
+                                border-radius: 16px;
+                                background: #FFF;
+                                @media screen and (max-width:400px) {
+                                    right: -267px;
+                                    top: -30px;
+                                }
+                                @media screen and (max-width:360px) {
+                                    right: -235px;
+                                    top: -27px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .trip_texts{
+                position: relative;
+                @media screen and (max-width:1000px) {
+                    display: none;
+                }
+                .trip_number{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 12;
+                    top: -370px;
+                    left: -95px;
+                    @media screen and (max-width:1400px) {
+                        display: none;
+                    }
+                    img{
+                        width: 172px;
+                        height: 13px;
+                    }
+                    h4{
+                        @include whiteText(24px,700,150%,3.6px);
+                        color: #41EAD4;
+                        font-family: Larsseit;
+                    }
+                    p{
+                        width: 210px;
+                        @include whiteText(24px,700,150%,3.6px);
+                        font-family: Larsseit;
+                    }
+                }
+                .trip_dots{
+                    position: absolute;
+                    z-index: 10;
+                    bottom: -57px;
+                    left: -55px;
+                }
+            }
+            .trip_socialIcons{
+                z-index: 15;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                right: 25px;
+                bottom: 12px;
+                @media screen and (max-width:1000px) {
+                    display: none;
+                }
+                h5{
+                    @include whiteText(15px,700,150%,2.25px);
+                    font-family: Larsseit;
+                }
+                div{
+                    display: flex;
+                    gap: 20px;
+                    a{
+                        z-index: 15;
+                        cursor: pointer;
+                    }
+                }
+                .socialIcons_line{
+                    position: absolute;
+                    bottom: -10px;
+                }
+            }
+        }
+    }
+}
