@@ -59,6 +59,34 @@ header .container .head .menu {
     display: none;
   }
 }
+header .container .head .menu .header_search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+header .container .head .menu .header_search input {
+  height: 30px;
+  background: none;
+  color: white;
+  outline: none;
+  border: solid 1px white;
+  padding: 4px;
+  border-radius: 6px;
+  font-size: 17px;
+  transform: scaleX(0);
+  transition: 0.3s;
+  transform-origin: right;
+}
+header .container .head .menu .header_search input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.562);
+}
+header .container .head .menu .header_search input::placeholder {
+  color: rgba(255, 255, 255, 0.562);
+}
+header .container .head .menu .header_search input.active {
+  transform: scaleX(1);
+  transition: 0.3s;
+}
 header .container .head .menu .header__button {
   position: relative;
 }

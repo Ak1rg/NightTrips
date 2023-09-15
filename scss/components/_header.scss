@@ -21,6 +21,31 @@ header{
                 @media screen and (max-width:1023px) {
                     display: none;
                 }
+                .header_search{
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    input{
+                        height: 30px;
+                        background: none;
+                        color: white;
+                        outline: none;
+                        border: solid 1px white ;
+                        padding: 4px;
+                        border-radius: 6px;
+                        font-size: 17px;
+                        transform: scaleX(0);
+                        transition: .3s;
+                        transform-origin: right;
+                    }
+                    input::placeholder{
+                        color: rgba(255, 255, 255, 0.562) ;
+                    }
+                    input.active{
+                        transform: scaleX(1);
+                        transition: .3s;
+                    }
+                }
                 .header__button{
                     position: relative;
                     button{

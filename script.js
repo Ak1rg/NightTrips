@@ -29,16 +29,25 @@ const button = document.getElementById("menu-button");
 
 burger(".burger_lines",".burger_buttons",".burger_lines","","")
 burger(".header__button",".burger_buttons",".burger-menu",".header_line",".header_line2")
-
 document.body.addEventListener("click", function(event) {
     if (event.target !== button) clickMenu();
 });
-
 document.querySelectorAll("#button").forEach(item => {
     item.addEventListener('click', () => {
         clickMenu()
     })
 })
+
+
+document.getElementById("menu-button").addEventListener("click", () => {
+    document.querySelector(".input").classList.remove("active")
+});
+
+document.querySelector(".search").addEventListener("click", () => {
+    document.querySelector(".input").classList.toggle("active")
+    clickMenu();
+});
+
 
 const swiper = new Swiper('.swiper', {
     loop: false,
