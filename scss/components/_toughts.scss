@@ -6,7 +6,7 @@
         max-width: 1680px;
         margin: 0 auto;
         border-radius: 8px;
-        background: #011627;
+        background: $black;
         .toughts_box{
             position: relative;
             .toughts-line{
@@ -27,14 +27,12 @@
                 flex-direction: column;
                 margin: 0 auto;
                 padding-top: 100px;
-                gap: 31px;
+                gap: $nGap;
                 text-align: center;
                 h2{
                     @include whiteText(72px,700,110%,-1.44px,$Noe);
                     @include bigWhiteText;
-                    @media screen  and (max-width:340px){
-                        font-size: 40px;
-                    }
+                    @include singleMedia(340px,40px);
                 }
                 h4{
                     @include whiteText(24px,700,150%,3.6px,$Larr);
@@ -43,9 +41,7 @@
             }
             .toughts_cards{
                 padding: 73px 0px 150px 0px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                @include parametrs(flex,row,center,normal,wrap);
                 gap: 25px;
                 max-width: 1046px;
                 margin: 0 auto;
@@ -69,18 +65,7 @@
                     }
                     .tought-card_text{
                         padding: 75px 74px 102px 102px;
-                        @media screen  and (max-width:681px){
-                            padding:75px 74px 70px 90px ;
-                        }
-                        @media screen  and (max-width:501px){
-                            padding:75px 40px 60px 80px ;
-                        }
-                        @media screen  and (max-width:461px){
-                            padding:70px 40px 60px 80px ;
-                        }
-                        @media screen  and (max-width:380px){
-                            padding:65px 40px 60px 70px ;
-                        }
+                        @include card;
                         display: flex;
                         flex-direction: column;
                         gap: 25px;
@@ -90,22 +75,12 @@
                             gap: 12px;
                             h5{
                                 @include whiteText(18px,400,190%,0px,$Larr);
-                                @media screen and (max-width:550px) {
-                                    font-size: 16px;
-                                }
-                                @media screen and (max-width:320px) {
-                                    font-size: 14px;
-                                }
+                                @include fonts(550px,16px,320px,14px);
                             }
                             p{
                                 @include whiteText(18px,300,190%,0px,$Larr);
                                 opacity: 0.7;
-                                @media screen and (max-width:500px) {
-                                    font-size: 17px;
-                                }
-                                @media screen and (max-width:340px) {
-                                    font-size: 14px;
-                                }
+                                @include fonts(500px,17px,340px,14px);
                             }
                         }
                         .tougth-card_userLine{
@@ -122,15 +97,8 @@
                                 h6{
                                     @include whiteText(12px,300,110%,3.6px,$Larr);
                                     @include littleWhiteText;
-                                    @media screen  and (max-width:680px){
-                                        font-size: 12px;
-                                    }
-                                    @media screen  and (max-width:550px){
-                                        font-size: 10px;
-                                    }
-                                    @media screen  and (max-width:340px){
-                                        font-size: 8px;
-                                    }
+                                    @include fonts(680px,12px,550px,10px);
+                                    @include singleMedia(340px,8px);
                                 }
                             }
                         }
@@ -138,11 +106,9 @@
                 }
             }
             .toughts_bottomText{
-                display: flex;
-                flex-direction: column;
-                gap: 31px;
+                @include parametrs(flex,column,normal,center,nowrap);
+                gap: $nGap;
                 text-align: center;
-                align-items: center;
                 padding-bottom: 138px;
                 h2{
                     @include whiteText(72px,700,110%,-1.44px,$Noe);

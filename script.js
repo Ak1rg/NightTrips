@@ -26,13 +26,22 @@ function slide (number,text,id,e,el,ele){
 }
 
 const button = document.getElementById("menu-button");
+const lines = document.getElementById("burger_lines");
+const line = document.getElementById("burger_line");
 
 burger(".burger_lines",".burger_buttons",".burger_lines","","")
 burger(".header__button",".burger_buttons",".burger-menu",".header_line",".header_line2")
 
-document.body.addEventListener("click", function(event) {
-    if (event.target !== button) clickMenu();
-});
+
+if (window.matchMedia("(max-width: 1023px)").matches) {
+    document.body.addEventListener("click", function(event) {
+        if (event.target !== lines && event.target !== line);
+    });
+} else {
+    document.body.addEventListener("click", function(event) {
+        if (event.target !== button) clickMenu();
+    });
+}
 
 document.querySelectorAll("#button").forEach(item => {
     item.addEventListener('click', () => {
@@ -84,3 +93,16 @@ $("#wild").click(function(){
     swiper.slideTo(3);
     slide('04.','JUNGLES OF BRAZIL',"wild","chill","spooky","desert");
 })
+
+$('a[href^="#"').on('click', function() {
+
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    },{
+        duration: 300
+    });
+    return false;
+});
+

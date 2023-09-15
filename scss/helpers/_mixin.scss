@@ -50,3 +50,42 @@
     background: #FFF;
     transition: .1s;
 }
+@mixin card{
+    @media screen  and (max-width:681px){
+        padding:75px 74px 70px 90px ;
+    }
+    @media screen  and (max-width:501px){
+        padding:75px 40px 60px 80px ;
+    }
+    @media screen  and (max-width:461px){
+        padding:70px 40px 60px 80px ;
+    }
+    @media screen  and (max-width:380px){
+        padding:65px 40px 60px 70px ;
+    }
+}
+@mixin fonts($w1,$s1,$w2,$s2){
+    @media screen  and (max-width:$w1){
+        font-size: $s1;
+    }
+    @media screen  and (max-width:$w2){
+        font-size: $s2;
+    }
+}
+@mixin singleMedia($px,$d){
+    @media screen and (max-width:$px) {
+        display: $d;
+    }
+}
+@mixin bFonts($w,$font,$line,$top,$w2,$font2,$line2,$top2){
+    @media screen and (max-width:$w) {
+        font-size: $font;
+        line-height: $line;
+        padding-top: $top;
+    }
+    @media screen and (max-width:$w2) {
+        font-size: $font2;
+        line-height: $line2;
+        padding-top: $top2;
+    }
+}

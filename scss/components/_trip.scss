@@ -9,7 +9,7 @@
             padding-bottom: 83px;
             display: flex;
             align-items: center;
-            gap: 33px;
+            gap: $nGap;
             @media  screen and (max-width:851px) {
                 flex-direction: column;
             }
@@ -33,18 +33,12 @@
         .trip_buttons{
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            @include parametrs(flex,row,center,normal,wrap);
             padding-bottom: 150px;
-            @media  screen and (max-width:800px) {
-                display: none;
-            }
+            @include singleMedia(800px,none);
             .trip_button{
-                flex-direction: column;
-                justify-content: space-between;
-                display: flex;
-                gap: 33px;
+                @include parametrs(flex,column,space-between,normal,nowrap);
+                gap: $nGap;
                 height: 55px;
                 margin-top: 20px;
                 cursor: pointer;
@@ -88,13 +82,9 @@
             }
         }
         .trip_swipeLine{
-            display: none;
-            @media screen and (max-width:800px) {
-                display: flex;
-            }
+            @include parametrs(none,row,center,center,nowrap);
+            @include singleMedia(800px,flex);
             padding: 20px;
-            align-items: center;
-            justify-content: center;
             gap: 8px;
             h5{
                 @include whiteText(18px,400,190%,0.75px,$Larr);
@@ -119,10 +109,7 @@
                 }
                 .trip_slide{
                     max-width: 1200px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-wrap: wrap;
+                    @include parametrs(flex,row,center,normal,wrap);
                     img{
                         border-radius: 10px;
                         background: #C4C4C4;
@@ -135,36 +122,25 @@
                             @include whiteText(65px,700,110%,-1.3px,$Noe);
                             @include bigWhiteText;
                             margin-top: 15px;
-                            @media screen and (max-width:350px) {
-                                font-size: 40px;
-                            }
+                            @include fonts(350px,40px,0,0)
                         }
                         h5{
                             padding-top: 35px;
                             @include whiteText(17px,400,150%,-0.34px,$Larr);
-                            @media screen and (max-width:600px) {
-                                font-size: 13px;
-                            }
+                            @include fonts(600px,13px,0,0)
                         }
                         p{
                             padding-top: 20px;
                             @include whiteText(17px,400,150%,-0.34px,$Larr);
                             color: #C4C4C4;
-                            @media screen and (max-width:600px) {
-                                font-size: 13px;
-                            }
+                            @include fonts(600px,13px,0,0)
                         }
                         .trip__button{
                             padding-top: 45px;
                             button{ 
                                 @include button;
                                 @include whiteText(16px,700,100%,1.6px,$Larr);
-                                @media screen and (max-width:400px) {
-                                    font-size: 13px;
-                                }
-                                @media screen and (max-width:360px) {
-                                    font-size: 10px;
-                                }
+                                @include fonts(400px,13px,360px,10px);
                             }
                             button:hover{
                                 box-shadow: $Shadow;
@@ -192,9 +168,7 @@
             }
             .trip_texts{
                 position: relative;
-                @media screen and (max-width:1000px) {
-                    display: none;
-                }
+                @include singleMedia(1000px,none);
                 .trip_number{
                     position: absolute;
                     display: flex;
@@ -202,9 +176,7 @@
                     z-index: 12;
                     top: -370px;
                     left: -95px;
-                    @media screen and (max-width:1400px) {
-                        display: none;
-                    }
+                    @include singleMedia(1400px,none);
                     img{
                         width: 172px;
                         height: 13px;
@@ -230,18 +202,16 @@
                 position: absolute;
                 display: flex;
                 flex-direction: column;
-                gap: 18px;
+                gap: $lGap;
                 right: 25px;
                 bottom: 12px;
-                @media screen and (max-width:1000px) {
-                    display: none;
-                }
+                @include singleMedia(1000px,none);
                 h5{
                     @include whiteText(15px,700,150%,2.25px,$Larr);
                 }
                 div{
                     display: flex;
-                    gap: 20px;
+                    gap: $lGap;
                     a{
                         z-index: 15;
                         cursor: pointer;

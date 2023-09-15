@@ -2,12 +2,10 @@
 @import "../helpers/variables";
 
 footer{
-    background: #011627;
+    background: $black;
     .footer__container{
+        @include parametrs(flex,column,normal,center,nowrap);
         position: relative;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
         width: 90%;
         margin: 0 auto;
         .footer_line{
@@ -23,10 +21,7 @@ footer{
             opacity: .8;
         }
         .footer_columns{
-            display: flex;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            justify-content: center;
+            @include parametrs(flex,row,center,flex-start,wrap);
             gap:75px 170px;
             padding-top: 137px;
             @media screen and (max-width:526px) {
@@ -35,10 +30,7 @@ footer{
                 flex-wrap: nowrap;
             }
             .footer_columnsLeft{
-                display: flex;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                justify-content: center;
+                @include parametrs(flex,row,center,flex-start,wrap);
                 gap: 120px;
                 @media screen and (max-width:526px) {
                     gap: 50px 100px;
@@ -48,7 +40,7 @@ footer{
                 .footer-column{
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: $lGap;
                     img{
                         width: 56px;
                     }
@@ -71,7 +63,7 @@ footer{
             .footer_columnRight{
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                gap: $lGap;
                 img{
                     width: 24px;
                 }
@@ -85,7 +77,7 @@ footer{
                 }
                 div{
                     display: flex;
-                    gap: 18px;
+                    gap: $lGap;
                     img:hover{
                         cursor: pointer;
                     }
@@ -94,9 +86,7 @@ footer{
         }
         .footer_text{
             padding: 80px 0px 140px 0px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include parametrs(flex,column,normal,center,nowrap);
             gap: 50px;
             h4{
                 @include whiteText(15px,300,100%,0px,$Larr);

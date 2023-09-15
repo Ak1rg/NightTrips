@@ -5,10 +5,7 @@
     padding: 310px 0px 235px 0px;
     .container{
         .about_usBox{
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            flex-wrap: wrap;
+            @include parametrs(flex,row,center,flex-start,wrap);
             @media screen  and (max-width:1000px){
                 gap: 50px 0px;
             }
@@ -83,15 +80,10 @@
                 }
             }
             .about_us-Right{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
+                @include parametrs(flex,row,center,center,wrap);
                 .about_us-photos{
                     margin-top: 15px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
+                    @include parametrs(flex,row,center,normal,wrap);
                     max-width: 790px;
                     @media screen  and (max-width:1000px){
                         gap: 15px;
@@ -100,9 +92,7 @@
                         position: relative;
                         max-height: 395px;
                         h5{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            @include parametrs(flex,row,center,center,nowrap);
                             padding: 25px 30px;
                             @media screen  and (max-width:800px){
                                 padding: 20px 25px;
@@ -124,12 +114,7 @@
                             span{
                                 @include whiteText(15px,700,150%,0.75px,$Larr);
                                 color: $blue;
-                                @media screen  and (max-width:800px){
-                                    font-size: 13px;
-                                }
-                                @media screen  and (max-width:450px){
-                                    font-size: 12px;
-                                }
+                                @include fonts(800px,13px,450px,12px);
                             }
                         }
                     }
@@ -157,9 +142,7 @@
                     flex-direction: column;
                     max-width: 70px;
                     gap: 10px;
-                    @media screen and (max-width:1306px) {
-                        display: none;
-                    }
+                    @include singleMedia(1306px,none);
                 }
             }
         }

@@ -52,7 +52,7 @@ header .container .head .menu {
   justify-content: normal;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 32px;
+  gap: 33px;
 }
 @media screen and (max-width: 1023px) {
   header .container .head .menu {
@@ -300,12 +300,14 @@ header .container .header__text h3 {
 @media screen and (max-width: 680px) {
   header .container .header__text h3 {
     font-size: 14px;
+    line-height: 100%;
     padding-top: 18px;
   }
 }
 @media screen and (max-width: 450px) {
   header .container .header__text h3 {
     font-size: 10px;
+    line-height: 100%;
     padding-top: 12px;
   }
 }
@@ -331,6 +333,7 @@ header .container .header__text p {
 @media screen and (max-width: 450px) {
   header .container .header__text p {
     font-size: 9px;
+    line-height: 100%;
     padding-top: 20px;
   }
 }
@@ -346,7 +349,7 @@ header .container .header_scroll {
 header .container .header_scroll .scroll_text {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 33px;
 }
 header .container .header_scroll .scroll_text .scroll_h3 {
   color: #FFF;
@@ -438,8 +441,10 @@ header .container .header_scroll .icons_line img {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  align-items: normal;
+  flex-wrap: wrap;
   padding-bottom: 150px;
 }
 @media screen and (max-width: 800px) {
@@ -448,9 +453,11 @@ header .container .header_scroll .icons_line img {
   }
 }
 .trip .container .trip_buttons .trip_button {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  display: flex;
+  align-items: normal;
+  flex-wrap: nowrap;
   gap: 33px;
   height: 55px;
   margin-top: 20px;
@@ -509,9 +516,11 @@ header .container .header_scroll .icons_line img {
 }
 .trip .container .trip_swipeLine {
   display: none;
-  padding: 20px;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 20px;
   gap: 8px;
 }
 @media screen and (max-width: 800px) {
@@ -552,8 +561,9 @@ header .container .header_scroll .icons_line img {
 .trip .container .trip_slider .swiper .trip_slide {
   max-width: 1200px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: normal;
   flex-wrap: wrap;
 }
 .trip .container .trip_slider .swiper .trip_slide img {
@@ -590,6 +600,11 @@ header .container .header_scroll .icons_line img {
     font-size: 40px;
   }
 }
+@media screen and (max-width: 0) {
+  .trip .container .trip_slider .swiper .trip_slide .trip_slide-text h3 {
+    font-size: 0;
+  }
+}
 .trip .container .trip_slider .swiper .trip_slide .trip_slide-text h5 {
   padding-top: 35px;
   color: #FFF;
@@ -603,6 +618,11 @@ header .container .header_scroll .icons_line img {
 @media screen and (max-width: 600px) {
   .trip .container .trip_slider .swiper .trip_slide .trip_slide-text h5 {
     font-size: 13px;
+  }
+}
+@media screen and (max-width: 0) {
+  .trip .container .trip_slider .swiper .trip_slide .trip_slide-text h5 {
+    font-size: 0;
   }
 }
 .trip .container .trip_slider .swiper .trip_slide .trip_slide-text p {
@@ -619,6 +639,11 @@ header .container .header_scroll .icons_line img {
 @media screen and (max-width: 600px) {
   .trip .container .trip_slider .swiper .trip_slide .trip_slide-text p {
     font-size: 13px;
+  }
+}
+@media screen and (max-width: 0) {
+  .trip .container .trip_slider .swiper .trip_slide .trip_slide-text p {
+    font-size: 0;
   }
 }
 .trip .container .trip_slider .swiper .trip_slide .trip_slide-text .trip__button {
@@ -731,7 +756,7 @@ header .container .header_scroll .icons_line img {
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
   right: 25px;
   bottom: 12px;
 }
@@ -767,8 +792,9 @@ header .container .header_scroll .icons_line img {
 }
 .about_us .container .about_usBox {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1000px) {
@@ -918,15 +944,18 @@ header .container .header_scroll .icons_line img {
 }
 .about_us .container .about_usBox .about_us-Right {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 .about_us .container .about_usBox .about_us-Right .about_us-photos {
   margin-top: 15px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  align-items: normal;
+  flex-wrap: wrap;
   max-width: 790px;
 }
 @media screen and (max-width: 1000px) {
@@ -940,8 +969,10 @@ header .container .header_scroll .icons_line img {
 }
 .about_us .container .about_usBox .about_us-Right .about_us-photos div h5 {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   padding: 25px 30px;
   background-color: white;
   border-radius: 10px;
@@ -1048,7 +1079,7 @@ header .container .header_scroll .icons_line img {
   flex-direction: column;
   margin: 0 auto;
   padding-top: 100px;
-  gap: 31px;
+  gap: 33px;
   text-align: center;
 }
 .toughts .toughts__container .toughts_box .toughts_upperText h2 {
@@ -1072,7 +1103,7 @@ header .container .header_scroll .icons_line img {
 }
 @media screen and (max-width: 340px) {
   .toughts .toughts__container .toughts_box .toughts_upperText h2 {
-    font-size: 40px;
+    display: 40px;
   }
 }
 .toughts .toughts__container .toughts_box .toughts_upperText h4 {
@@ -1097,8 +1128,10 @@ header .container .header_scroll .icons_line img {
 .toughts .toughts__container .toughts_box .toughts_cards {
   padding: 73px 0px 150px 0px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
+  align-items: normal;
+  flex-wrap: wrap;
   gap: 25px;
   max-width: 1046px;
   margin: 0 auto;
@@ -1240,15 +1273,17 @@ header .container .header_scroll .icons_line img {
 }
 @media screen and (max-width: 340px) {
   .toughts .toughts__container .toughts_box .toughts_cards .toughts-card .tought-card_text .tougth-card_userLine div h6 {
-    font-size: 8px;
+    display: 8px;
   }
 }
 .toughts .toughts__container .toughts_box .toughts_bottomText {
   display: flex;
   flex-direction: column;
-  gap: 31px;
-  text-align: center;
+  justify-content: normal;
   align-items: center;
+  flex-wrap: nowrap;
+  gap: 33px;
+  text-align: center;
   padding-bottom: 138px;
 }
 .toughts .toughts__container .toughts_box .toughts_bottomText h2 {
@@ -1295,10 +1330,12 @@ footer {
   background: #011627;
 }
 footer .footer__container {
-  position: relative;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: relative;
   width: 90%;
   margin: 0 auto;
 }
@@ -1316,9 +1353,10 @@ footer .footer__container .footer_line {
 }
 footer .footer__container .footer_columns {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 75px 170px;
   padding-top: 137px;
 }
@@ -1331,9 +1369,10 @@ footer .footer__container .footer_columns {
 }
 footer .footer__container .footer_columns .footer_columnsLeft {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 120px;
 }
 @media screen and (max-width: 526px) {
@@ -1428,7 +1467,7 @@ footer .footer__container .footer_columns .footer_columnRight h4 {
 }
 footer .footer__container .footer_columns .footer_columnRight div {
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
 footer .footer__container .footer_columns .footer_columnRight div img:hover {
   cursor: pointer;
@@ -1437,7 +1476,9 @@ footer .footer__container .footer_text {
   padding: 80px 0px 140px 0px;
   display: flex;
   flex-direction: column;
+  justify-content: normal;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 50px;
 }
 footer .footer__container .footer_text h4 {
