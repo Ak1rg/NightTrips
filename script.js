@@ -11,19 +11,34 @@ function burger(el,ele,elem,line,line2) {
         document.querySelector(line2).classList.toggle("active")
     })
 }
+function clickMenu (){
+    document.querySelector(".burger-menu").classList.remove("active")
+    document.querySelector(".burger_buttons").classList.remove("active")
+    document.querySelector(".burger_lines").classList.remove("active")
+    document.querySelector(".header_line").classList.remove("active")
+    document.querySelector(".header_line2").classList.remove("active")
+}
+function slide (number,text,id,e,el,ele){
+    document.querySelector("#number").innerHTML=(number)
+    document.querySelector("#text").innerHTML=(text)
+    document.getElementById(id).classList.toggle("active")
+    remove(e,el,ele)
+}
+
+const button = document.getElementById("menu-button");
+
 burger(".burger_lines",".burger_buttons",".burger_lines","","")
 burger(".header__button",".burger_buttons",".burger-menu",".header_line",".header_line2")
 
+document.body.addEventListener("click", function(event) {
+    if (event.target !== button) clickMenu();
+});
+
 document.querySelectorAll("#button").forEach(item => {
     item.addEventListener('click', () => {
-        document.querySelector(".burger-menu").classList.remove("active")
-        document.querySelector(".burger_buttons").classList.remove("active")
-        document.querySelector(".burger_lines").classList.remove("active")
-        document.querySelector(".header_line").classList.remove("active")
-        document.querySelector(".header_line2").classList.remove("active")
+        clickMenu()
     })
 })
-
 
 const swiper = new Swiper('.swiper', {
     loop: false,
@@ -36,32 +51,19 @@ const swiper = new Swiper('.swiper', {
 
 document.getElementById("chill").classList.toggle("active")
 
-
 $("#chill").click(function(){
     swiper.slideTo(0);
-    document.querySelector("#number").innerHTML=('01.')
-    document.querySelector("#text").innerHTML=('PLATEAU OF MOUNTAINS')
-    document.getElementById("chill").classList.toggle("active")
-    remove("spooky","desert","wild")
+    slide('01.','PLATEAU OF MOUNTAINS',"chill","spooky","desert","wild");
 })
 $("#spooky").click(function(){
     swiper.slideTo(1);
-    document.querySelector("#number").innerHTML=('02.')
-    document.querySelector("#text").innerHTML=('MISTY FOREST LANDSCAPE')
-    document.getElementById("spooky").classList.toggle("active")
-    remove("chill","desert","wild")
+    slide('02.','MISTY FOREST LANDSCAPE',"spooky","chill","desert","wild");
 })
 $("#desert").click(function(){
     swiper.slideTo(2);
-    document.querySelector("#number").innerHTML=('03.')
-    document.querySelector("#text").innerHTML=('GRAND DUNES LANDSCAPE')
-    document.getElementById("desert").classList.toggle("active")
-    remove("chill","spooky","wild")
+    slide('03.','GRAND DUNES LANDSCAPE',"desert","chill","spooky","wild");
 })
 $("#wild").click(function(){
     swiper.slideTo(3);
-    document.querySelector("#number").innerHTML=('04.')
-    document.querySelector("#text").innerHTML=('JUNGLES OF BRAZIL')
-    document.getElementById("wild").classList.toggle("active")
-    remove("chill","spooky","desert")
+    slide('04.','JUNGLES OF BRAZIL',"wild","chill","spooky","desert");
 })
