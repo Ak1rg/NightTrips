@@ -26,22 +26,25 @@ function slide (number,text,id,e,el,ele){
 }
 
 const button = document.getElementById("menu-button");
-const lines = document.getElementById("burger_lines");
-const line = document.getElementById("burger_line");
+let x = window.matchMedia("(min-width: 1000px)");
 
 burger(".burger_lines",".burger_buttons",".burger_lines","","")
 burger(".header__button",".burger_buttons",".burger-menu",".header_line",".header_line2")
 
 
-if (window.matchMedia("(max-width: 1023px)").matches) {
-    document.body.addEventListener("click", function(event) {
-        if (event.target !== lines && event.target !== line);
-    });
-} else {
-    document.body.addEventListener("click", function(event) {
-        if (event.target !== button) clickMenu();
-    });
-}
+document.body.addEventListener("click", () => {
+    if (window.matchMedia("(min-width: 1920px)").matches) {
+        document.body.addEventListener("click", function(e) {
+            if (e.target !== button) clickMenu();
+        });
+    } 
+    if (window.matchMedia("(min-width: 1000px)").matches) {
+        document.body.addEventListener("click", function(e) {
+            if (e.target !== button) ;
+        });
+    } 
+});
+
 
 document.querySelectorAll("#button").forEach(item => {
     item.addEventListener('click', () => {

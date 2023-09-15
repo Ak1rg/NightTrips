@@ -10,6 +10,7 @@
   background-image: url(../img/background.png);
   background-position-y: top;
   background-position-x: center;
+  background-repeat: no-repeat;
 }
 
 .container {
