@@ -1,5 +1,5 @@
 @import "../helpers/mixin";
-
+@import "../helpers/variables";
 
 .toughts{
     .toughts__container{
@@ -18,7 +18,7 @@
                 width: 2px;
                 height: 80px;
                 border-radius: 13px;
-                background: linear-gradient(180deg, #09F4F4 0%, #00C9E0 100%);
+                background: $Gradient;;
                 opacity: .8;
             }
             .toughts_upperText{
@@ -30,17 +30,15 @@
                 gap: 31px;
                 text-align: center;
                 h2{
-                    @include whiteText(72px,700,110%,-1.44px);
+                    @include whiteText(72px,700,110%,-1.44px,$Noe);
                     @include bigWhiteText;
-                    font-family: Noe Display;
                     @media screen  and (max-width:340px){
                         font-size: 40px;
                     }
                 }
                 h4{
-                    @include whiteText(24px,700,150%,3.6px);
+                    @include whiteText(24px,700,150%,3.6px,$Larr);
                     @include littleWhiteText;
-                    font-family: Larsseit;
                 }
             }
             .toughts_cards{
@@ -91,8 +89,7 @@
                             flex-direction: column;
                             gap: 12px;
                             h5{
-                                @include whiteText(18px,400,190%,0px);
-                                font-family: Larsseit;
+                                @include whiteText(18px,400,190%,0px,$Larr);
                                 @media screen and (max-width:550px) {
                                     font-size: 16px;
                                 }
@@ -101,8 +98,7 @@
                                 }
                             }
                             p{
-                                @include whiteText(18px,300,190%,0px);
-                                font-family: Larsseit;
+                                @include whiteText(18px,300,190%,0px,$Larr);
                                 opacity: 0.7;
                                 @media screen and (max-width:500px) {
                                     font-size: 17px;
@@ -124,9 +120,8 @@
                                 flex-direction: column;
                                 gap: 6px;
                                 h6{
-                                    @include whiteText(12px,300,110%,3.6px);
+                                    @include whiteText(12px,300,110%,3.6px,$Larr);
                                     @include littleWhiteText;
-                                    font-family: Larsseit;
                                     @media screen  and (max-width:680px){
                                         font-size: 12px;
                                     }
@@ -150,15 +145,13 @@
                 align-items: center;
                 padding-bottom: 138px;
                 h2{
-                    @include whiteText(72px,700,110%,-1.44px);
+                    @include whiteText(72px,700,110%,-1.44px,$Noe);
                     @include bigWhiteText;
-                    font-family: Noe Display;
                 }
                 h3{
                     max-width: 388px;
-                    @include whiteText(24px,700,150%,1.68px);
+                    @include whiteText(24px,700,150%,1.68px,$Larr);
                     @include littleWhiteText;
-                    font-family: Larsseit;
                 }
             }
         }

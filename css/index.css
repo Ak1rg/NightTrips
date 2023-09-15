@@ -29,7 +29,10 @@
 
 header .container .head {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: normal;
+  flex-wrap: nowrap;
   padding-top: 90px;
   height: 160px;
 }
@@ -45,8 +48,11 @@ header .container .head .logo {
 }
 header .container .head .menu {
   display: flex;
-  gap: 32px;
+  flex-direction: row;
+  justify-content: normal;
   align-items: center;
+  flex-wrap: nowrap;
+  gap: 32px;
 }
 @media screen and (max-width: 1023px) {
   header .container .head .menu {
@@ -62,15 +68,16 @@ header .container .head .menu .header__button button {
   border: none;
   padding: 21px 57px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-family: Larsseit;
+  transition: 0.3s;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 1.6px;
-  text-transform: uppercase;
-  font-family: Larsseit;
-  transition: 0.3s;
 }
 header .container .head .menu .header__button button:hover {
   box-shadow: 0px 0px 40px 10px rgba(0, 201, 224, 0.2);
@@ -83,10 +90,9 @@ header .container .head .menu .header__button .header_line {
   height: 2px;
   border-radius: 16px;
   background: #FFF;
-  transition: 0.3s;
+  transition: 0.1s;
 }
 header .container .head .menu .header__button .header_line2 {
-  visibility: hidden;
   position: absolute;
   right: -15px;
   top: 48%;
@@ -94,15 +100,16 @@ header .container .head .menu .header__button .header_line2 {
   height: 2px;
   border-radius: 16px;
   background: #FFF;
-  transition: 0.3s;
+  transition: 0.1s;
+  visibility: hidden;
 }
 header .container .head .menu .header__button .header_line.active {
-  transition: 0.3s;
+  transition: 0.1s;
   transform: rotate(40deg);
 }
 header .container .head .menu .header__button .header_line2.active {
   visibility: visible;
-  transition: 0.3s;
+  transition: 0.1s;
   transform: rotate(-40deg);
 }
 header .container .head .burger-menu.active {
@@ -110,9 +117,10 @@ header .container .head .burger-menu.active {
 }
 header .container .burger-menu {
   display: none;
-  align-items: center;
+  flex-direction: row;
   justify-content: flex-end;
-  transition-duration: 0.2s;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 @media screen and (max-width: 1023px) {
   header .container .burger-menu {
@@ -121,6 +129,10 @@ header .container .burger-menu {
 }
 header .container .burger-menu .burger_lines {
   display: none;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: normal;
+  flex-wrap: nowrap;
   flex-direction: column;
   gap: 8px;
   position: absolute;
@@ -136,7 +148,7 @@ header .container .burger-menu .burger_lines .burger_line {
   width: 40px;
   height: 4px;
   border-radius: 5px;
-  background-color: #00C9E0;
+  background-color: #41EAD4;
 }
 header .container .burger-menu .burger_lines .burger_line:nth-of-type(1) {
   transform: translateY(0%) rotate(0);
@@ -165,11 +177,12 @@ header .container .burger-menu .burger_buttons {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: normal;
+  flex-wrap: nowrap;
   width: 300px;
   top: 185px;
   transform: translateX(150%);
   gap: 10px;
-  transition: all 1s;
 }
 @media screen and (max-width: 1023px) {
   header .container .burger-menu .burger_buttons {
@@ -179,19 +192,21 @@ header .container .burger-menu .burger_buttons {
 }
 header .container .burger-menu .burger_buttons a {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   height: 40px;
   text-decoration: none;
   border-radius: 10px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 1.6px;
   text-transform: uppercase;
-  font-family: Larsseit;
   background: #011627;
 }
 @media screen and (max-width: 1023px) {
@@ -203,7 +218,7 @@ header .container .burger-menu .burger_buttons a {
 }
 header .container .burger-menu .burger_buttons a:hover {
   transform: translateX(-10%);
-  transition: all 0.4s;
+  transition: 0.3s;
 }
 @media screen and (max-width: 1023px) {
   header .container .burger-menu .burger_buttons a:hover {
@@ -213,7 +228,6 @@ header .container .burger-menu .burger_buttons a:hover {
 header .container .burger-menu .burger_buttons.active {
   display: flex;
   transform: translateX(0%);
-  transition-duration: all 0.2s;
 }
 header .container .burger-menu.active {
   display: flex;
@@ -221,17 +235,19 @@ header .container .burger-menu.active {
 header .container .header__text {
   display: flex;
   flex-direction: column;
+  justify-content: normal;
   align-items: center;
+  flex-wrap: nowrap;
   padding-top: 152px;
 }
 header .container .header__text h1 {
   color: #FFF;
+  font-family: Noe Display;
   font-size: 120px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: -2.4px;
-  font-family: Noe Display;
   text-align: center;
 }
 @media screen and (max-width: 680px) {
@@ -246,12 +262,12 @@ header .container .header__text h1 {
 }
 header .container .header__text h3 {
   color: #FFF;
+  font-family: Noe Display;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 1.8px;
-  font-family: Larsseit;
   padding-top: 44px;
 }
 @media screen and (max-width: 680px) {
@@ -270,12 +286,12 @@ header .container .header__text p {
   max-width: 643px;
   padding-top: 50px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
   letter-spacing: 1.6px;
-  font-family: Larsseit;
   text-align: center;
 }
 @media screen and (max-width: 680px) {
@@ -295,8 +311,10 @@ header .container .header_scroll {
   padding-top: 192px;
   padding-bottom: 245px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: nowrap;
 }
 header .container .header_scroll .scroll_text {
   display: flex;
@@ -305,12 +323,12 @@ header .container .header_scroll .scroll_text {
 }
 header .container .header_scroll .scroll_text .scroll_h3 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 190%;
   letter-spacing: 0.75px;
-  font-family: Larsseit;
   transform: rotate(-90deg);
   margin-left: -28px;
 }
@@ -345,12 +363,12 @@ header .container .header_scroll .icons_line img {
 }
 .trip .container .trip_header h2 {
   color: #FFF;
+  font-family: Noe Display;
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -1.44px;
-  font-family: Noe Display;
 }
 @media screen and (max-width: 680px) {
   .trip .container .trip_header h2 {
@@ -370,12 +388,12 @@ header .container .header_scroll .icons_line img {
   position: relative;
   top: 8px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.32px;
-  font-family: Larsseit;
   max-width: 300px;
   text-align: center;
 }
@@ -410,15 +428,16 @@ header .container .header_scroll .icons_line img {
   height: 55px;
   margin-top: 20px;
   cursor: pointer;
+  opacity: 1;
 }
 .trip .container .trip_buttons .trip_button h4 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 110%;
   letter-spacing: -0.32px;
-  font-family: Larsseit;
   opacity: 0.5;
   text-align: center;
 }
@@ -431,12 +450,12 @@ header .container .header_scroll .icons_line img {
 }
 .trip .container .trip_buttons .trip_button:hover h4 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -0.36px;
-  font-family: Larsseit;
   color: #41EAD4;
   opacity: 1;
   transition: 0.2s;
@@ -448,12 +467,12 @@ header .container .header_scroll .icons_line img {
 }
 .trip .container .trip_buttons .trip_button.active h4 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -0.36px;
-  font-family: Larsseit;
   color: #41EAD4;
   opacity: 1;
 }
@@ -493,12 +512,12 @@ header .container .header_scroll .icons_line img {
 }
 .trip .container .trip_slider .swiper .trip_slide .trip_slide-text h3 {
   color: #FFF;
+  font-family: Noe Display;
   font-size: 65px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -1.3px;
-  font-family: Noe Display;
   margin-top: 15px;
 }
 @media screen and (max-width: 680px) {
@@ -519,12 +538,12 @@ header .container .header_scroll .icons_line img {
 .trip .container .trip_slider .swiper .trip_slide .trip_slide-text h5 {
   padding-top: 35px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.34px;
-  font-family: Larsseit;
 }
 @media screen and (max-width: 600px) {
   .trip .container .trip_slider .swiper .trip_slide .trip_slide-text h5 {
@@ -534,13 +553,13 @@ header .container .header_scroll .icons_line img {
 .trip .container .trip_slider .swiper .trip_slide .trip_slide-text p {
   padding-top: 20px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: -0.34px;
   color: #C4C4C4;
-  font-family: Larsseit;
 }
 @media screen and (max-width: 600px) {
   .trip .container .trip_slider .swiper .trip_slide .trip_slide-text p {
@@ -556,15 +575,16 @@ header .container .header_scroll .icons_line img {
   border: none;
   padding: 21px 57px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-family: Larsseit;
+  transition: 0.3s;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 1.6px;
-  text-transform: uppercase;
-  font-family: Larsseit;
-  transition: 0.3s;
 }
 @media screen and (max-width: 400px) {
   .trip .container .trip_slider .swiper .trip_slide .trip_slide-text .trip__button button {
@@ -627,23 +647,23 @@ header .container .header_scroll .icons_line img {
 }
 .trip .container .trip_slider .trip_texts .trip_number h4 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 3.6px;
   color: #41EAD4;
-  font-family: Larsseit;
 }
 .trip .container .trip_slider .trip_texts .trip_number p {
   width: 210px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 3.6px;
-  font-family: Larsseit;
 }
 .trip .container .trip_slider .trip_texts .trip_dots {
   position: absolute;
@@ -667,12 +687,12 @@ header .container .header_scroll .icons_line img {
 }
 .trip .container .trip_slider .trip_socialIcons h5 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 2.25px;
-  font-family: Larsseit;
 }
 .trip .container .trip_slider .trip_socialIcons div {
   display: flex;
@@ -718,12 +738,12 @@ header .container .header_scroll .icons_line img {
 }
 .about_us .container .about_usBox .about_us-text h3 {
   color: #FFF;
+  font-family: Noe Display;
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -1.44px;
-  font-family: Noe Display;
 }
 @media screen and (max-width: 680px) {
   .about_us .container .about_usBox .about_us-text h3 {
@@ -750,37 +770,26 @@ header .container .header_scroll .icons_line img {
   border: none;
   padding: 21px 57px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-family: Larsseit;
+  transition: 0.3s;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 2.1px;
-  text-transform: uppercase;
-  font-family: Larsseit;
-  transition: 0.3s;
 }
 @media screen and (max-width: 454px) {
   .about_us .container .about_usBox .about_us-text .about_us-button button {
     font-size: 10px;
-    color: #FFF;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 110%;
-    letter-spacing: 1.4px;
     padding: 17px 47px;
   }
 }
 @media screen and (max-width: 370px) {
   .about_us .container .about_usBox .about_us-text .about_us-button button {
     font-size: 8px;
-    color: #FFF;
-    font-size: 8px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 90%;
-    letter-spacing: 0.5px;
     padding: 14px 39px;
   }
 }
@@ -813,12 +822,12 @@ header .container .header_scroll .icons_line img {
 }
 .about_us .container .about_usBox .about_us-text div h5 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: -0.36px;
-  font-family: Larsseit;
 }
 @media screen and (max-width: 680px) {
   .about_us .container .about_usBox .about_us-text div h5 {
@@ -834,12 +843,12 @@ header .container .header_scroll .icons_line img {
   padding: 6px 0px;
   margin: 15px 0px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
   letter-spacing: -0.36px;
-  font-family: Larsseit;
   opacity: 0.5;
 }
 @media screen and (max-width: 680px) {
@@ -885,12 +894,12 @@ header .container .header_scroll .icons_line img {
   bottom: 50px;
   left: -25px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.75px;
-  font-family: Larsseit;
   color: #000;
   opacity: 0;
 }
@@ -909,13 +918,13 @@ header .container .header_scroll .icons_line img {
 }
 .about_us .container .about_usBox .about_us-Right .about_us-photos div h5 span {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.75px;
-  color: #00C9E0;
-  font-family: Larsseit;
+  color: #41EAD4;
 }
 @media screen and (max-width: 800px) {
   .about_us .container .about_usBox .about_us-Right .about_us-photos div h5 span {
@@ -929,11 +938,11 @@ header .container .header_scroll .icons_line img {
 }
 .about_us .container .about_usBox .about_us-Right .about_us-photos div:hover h5 {
   opacity: 1;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .about_us .container .about_usBox .about_us-Right .about_us-photos div:hover img {
   opacity: 1;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .about_us .container .about_usBox .about_us-Right .about_us-photos img {
   max-width: 100%;
@@ -984,12 +993,12 @@ header .container .header_scroll .icons_line img {
 }
 .toughts .toughts__container .toughts_box .toughts_upperText h2 {
   color: #FFF;
+  font-family: Noe Display;
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -1.44px;
-  font-family: Noe Display;
 }
 @media screen and (max-width: 680px) {
   .toughts .toughts__container .toughts_box .toughts_upperText h2 {
@@ -1008,12 +1017,12 @@ header .container .header_scroll .icons_line img {
 }
 .toughts .toughts__container .toughts_box .toughts_upperText h4 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 3.6px;
-  font-family: Larsseit;
 }
 @media screen and (max-width: 680px) {
   .toughts .toughts__container .toughts_box .toughts_upperText h4 {
@@ -1090,12 +1099,12 @@ header .container .header_scroll .icons_line img {
 }
 .toughts .toughts__container .toughts_box .toughts_cards .toughts-card .tought-card_text .tought-card-upperText h5 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 190%;
   letter-spacing: 0px;
-  font-family: Larsseit;
 }
 @media screen and (max-width: 550px) {
   .toughts .toughts__container .toughts_box .toughts_cards .toughts-card .tought-card_text .tought-card-upperText h5 {
@@ -1109,12 +1118,12 @@ header .container .header_scroll .icons_line img {
 }
 .toughts .toughts__container .toughts_box .toughts_cards .toughts-card .tought-card_text .tought-card-upperText p {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
   line-height: 190%;
   letter-spacing: 0px;
-  font-family: Larsseit;
   opacity: 0.7;
 }
 @media screen and (max-width: 500px) {
@@ -1142,12 +1151,12 @@ header .container .header_scroll .icons_line img {
 }
 .toughts .toughts__container .toughts_box .toughts_cards .toughts-card .tought-card_text .tougth-card_userLine div h6 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
   line-height: 110%;
   letter-spacing: 3.6px;
-  font-family: Larsseit;
 }
 @media screen and (max-width: 680px) {
   .toughts .toughts__container .toughts_box .toughts_cards .toughts-card .tought-card_text .tougth-card_userLine div h6 {
@@ -1184,12 +1193,12 @@ header .container .header_scroll .icons_line img {
 }
 .toughts .toughts__container .toughts_box .toughts_bottomText h2 {
   color: #FFF;
+  font-family: Noe Display;
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -1.44px;
-  font-family: Noe Display;
 }
 @media screen and (max-width: 680px) {
   .toughts .toughts__container .toughts_box .toughts_bottomText h2 {
@@ -1204,12 +1213,12 @@ header .container .header_scroll .icons_line img {
 .toughts .toughts__container .toughts_box .toughts_bottomText h3 {
   max-width: 388px;
   color: #FFF;
+  font-family: Larsseit;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 1.68px;
-  font-family: Larsseit;
 }
 @media screen and (max-width: 680px) {
   .toughts .toughts__container .toughts_box .toughts_bottomText h3 {
@@ -1284,12 +1293,12 @@ footer .footer__container .footer_columns .footer_columnsLeft .footer-column img
 }
 footer .footer__container .footer_columns .footer_columnsLeft .footer-column h4 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 0px;
-  font-family: Larsseit;
   text-transform: uppercase;
 }
 @media screen and (max-width: 680px) {
@@ -1304,12 +1313,12 @@ footer .footer__container .footer_columns .footer_columnsLeft .footer-column h4 
 }
 footer .footer__container .footer_columns .footer_columnsLeft .footer-column p {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
   line-height: 100%;
   letter-spacing: 0px;
-  font-family: Larsseit;
   cursor: pointer;
 }
 @media screen and (max-width: 680px) {
@@ -1339,12 +1348,12 @@ footer .footer__container .footer_columns .footer_columnRight .divider {
 }
 footer .footer__container .footer_columns .footer_columnRight h4 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 0px;
-  font-family: Larsseit;
   text-transform: uppercase;
 }
 @media screen and (max-width: 680px) {
@@ -1373,12 +1382,12 @@ footer .footer__container .footer_text {
 }
 footer .footer__container .footer_text h4 {
   color: #FFF;
+  font-family: Larsseit;
   font-size: 15px;
   font-style: normal;
   font-weight: 300;
   line-height: 100%;
   letter-spacing: 0px;
-  font-family: Larsseit;
 }
 @media screen and (max-width: 680px) {
   footer .footer__container .footer_text h4 {
