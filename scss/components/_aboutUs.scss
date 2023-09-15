@@ -146,6 +146,9 @@
                     img{
                         max-width: 100%;
                         opacity: .4;
+                        @media screen and (max-width:1001px){
+                            opacity: .6;
+                        }
                     }
                 }
                 .about_us-dots{

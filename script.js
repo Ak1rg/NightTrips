@@ -29,9 +29,11 @@ const button = document.getElementById("menu-button");
 
 burger(".burger_lines",".burger_buttons",".burger_lines","","")
 burger(".header__button",".burger_buttons",".burger-menu",".header_line",".header_line2")
+
 document.body.addEventListener("click", function(event) {
     if (event.target !== button) clickMenu();
 });
+
 document.querySelectorAll("#button").forEach(item => {
     item.addEventListener('click', () => {
         clickMenu()
@@ -48,6 +50,12 @@ document.querySelector(".search").addEventListener("click", () => {
     clickMenu();
 });
 
+const input = document.querySelector(".input")
+const img = document.querySelector(".search")
+
+document.body.addEventListener("click", function(event) {
+    if (event.target !== img && input) input.classList.remove('active');
+});
 
 const swiper = new Swiper('.swiper', {
     loop: false,

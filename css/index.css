@@ -59,12 +59,12 @@ header .container .head .menu {
     display: none;
   }
 }
-header .container .head .menu .header_search {
+header .container .head .menu .header-search {
   display: flex;
   gap: 8px;
   align-items: center;
 }
-header .container .head .menu .header_search input {
+header .container .head .menu .header-search input {
   height: 30px;
   background: none;
   color: white;
@@ -77,13 +77,13 @@ header .container .head .menu .header_search input {
   transition: 0.3s;
   transform-origin: right;
 }
-header .container .head .menu .header_search input::-moz-placeholder {
+header .container .head .menu .header-search input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.562);
 }
-header .container .head .menu .header_search input::placeholder {
+header .container .head .menu .header-search input::placeholder {
   color: rgba(255, 255, 255, 0.562);
 }
-header .container .head .menu .header_search input.active {
+header .container .head .menu .header-search input.active {
   transform: scaleX(1);
   transition: 0.3s;
 }
@@ -507,6 +507,34 @@ header .container .header_scroll .icons_line img {
 .trip .container .trip_buttons .trip_button.active .trip_button-line {
   background-color: #41EAD4;
   opacity: 1;
+}
+.trip .container .trip_swipeLine {
+  display: none;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+@media screen and (max-width: 800px) {
+  .trip .container .trip_swipeLine {
+    display: flex;
+  }
+}
+.trip .container .trip_swipeLine h5 {
+  color: #FFF;
+  font-family: Larsseit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 190%;
+  letter-spacing: 0.75px;
+}
+.trip .container .trip_swipeLine div {
+  margin-left: 5px;
+  width: 80px;
+  height: 2px;
+  border-radius: 13px;
+  background-color: #41EAD4;
 }
 .trip .container .trip_slider {
   max-width: 1200px;
@@ -975,6 +1003,11 @@ header .container .header_scroll .icons_line img {
 .about_us .container .about_usBox .about_us-Right .about_us-photos img {
   max-width: 100%;
   opacity: 0.4;
+}
+@media screen and (max-width: 1001px) {
+  .about_us .container .about_usBox .about_us-Right .about_us-photos img {
+    opacity: 0.6;
+  }
 }
 .about_us .container .about_usBox .about_us-Right .about_us-dots {
   margin-left: 10px;
