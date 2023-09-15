@@ -75,6 +75,60 @@ header{
                 display: flex;
             }
         }
+        .right-menu.hidden{
+            display: none;
+        }
+        .right-menu.active{
+            transform: translateX(90%);
+            transition: .2s;
+        }
+        .right-menu:hover{
+            transform: translateX(0%);
+            transition: .2s;
+        }
+        .right-menu{
+            position: fixed;
+            display: none;
+            @media screen and (max-width:1023px) {
+                display: flex;
+            }
+            top: 50px;
+            right: 0px;
+            z-index: 20;
+            transform: translateX(90%);
+            transition: .2s;
+            .leftLine{
+                width: 30px;
+                height: 80px;
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+                background-color: $black;
+                border: 1px solid black;
+                @include parametrs(flex,column,center,center,nowrap);
+                gap: 15px;
+                .right-menu_line{
+                    width: 15px;
+                    height: 2px;
+                    background-color: $blue;
+                }
+            }
+            .right_buttons{
+                top: 50px;
+                right: 100px;                
+                @include parametrs(flex,column,center,normal,nowrap);
+                width: 250px;
+                gap: 0px;
+                a{
+                    @include parametrs(flex,row,center,center,nowrap);
+                    text-decoration: none;
+                    @include whiteText(14px,400,100%,1.6px,$Larr);
+                    text-transform: uppercase;
+                    background:$black;
+                    height: 60px;
+                    border: 1px solid black;
+                }
+            }
+        }
         .burger-menu{
             @include parametrs(none,row,flex-end,center,nowrap);
             @include singleMedia(1023px,flex);

@@ -144,6 +144,80 @@ header .container .head .menu .header__button .header_line2.active {
 header .container .head .burger-menu.active {
   display: flex;
 }
+header .container .right-menu.hidden {
+  display: none;
+}
+header .container .right-menu.active {
+  transform: translateX(90%);
+  transition: 0.2s;
+}
+header .container .right-menu:hover {
+  transform: translateX(0%);
+  transition: 0.2s;
+}
+header .container .right-menu {
+  position: fixed;
+  display: none;
+  top: 50px;
+  right: 0px;
+  z-index: 20;
+  transform: translateX(90%);
+  transition: 0.2s;
+}
+@media screen and (max-width: 1023px) {
+  header .container .right-menu {
+    display: flex;
+  }
+}
+header .container .right-menu .leftLine {
+  width: 30px;
+  height: 80px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #011627;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+header .container .right-menu .leftLine .right-menu_line {
+  width: 15px;
+  height: 2px;
+  background-color: #41EAD4;
+}
+header .container .right-menu .right_buttons {
+  top: 50px;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+  flex-wrap: nowrap;
+  width: 250px;
+  gap: 0px;
+}
+header .container .right-menu .right_buttons a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: #FFF;
+  font-family: Larsseit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  background: #011627;
+  height: 60px;
+  border: 1px solid black;
+}
 header .container .burger-menu {
   display: none;
   flex-direction: row;

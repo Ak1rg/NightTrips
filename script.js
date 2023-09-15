@@ -109,3 +109,22 @@ $('a[href^="#"').on('click', function() {
     return false;
 });
 
+let $win = $(window),
+	$fixed = $(".right-menu"),
+	limit = 175;
+
+function tgl (state) {
+    $fixed.toggleClass("hidden", state);
+    clickMenu()
+}
+
+$win.on("scroll", function () {
+	let top = $win.scrollTop();
+
+    
+    if (top < limit) {
+        tgl(true);
+    } else {
+        tgl(false);
+    }
+});
