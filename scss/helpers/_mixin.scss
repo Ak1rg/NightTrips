@@ -1,12 +1,19 @@
-@mixin whiteText ($size,$weight,$height,$spacing) {
+@mixin parametrs($flex,$dir,$con,$item,$wrap){
+    display: $flex;
+    flex-direction: $dir;
+    justify-content: $con;
+    align-items: $item;
+    flex-wrap: $wrap;
+}
+@mixin whiteText ($size,$weight,$height,$spacing,$family) {
     color: #FFF;
+    font-family: $family;
     font-size: $size;
     font-style: normal;
     font-weight: $weight;
     line-height: $height;
     letter-spacing: $spacing;
 }
-
 @mixin bigWhiteText {
     @media screen and (max-width:680px) {
         font-size: 58px;
@@ -15,7 +22,6 @@
         font-size: 48px;
     }
 }
-
 @mixin littleWhiteText {
     @media screen and (max-width:680px) {
         font-size: 14px;
@@ -23,4 +29,24 @@
     @media screen and (max-width:450px) {
         font-size: 12px;
     }
+}
+@mixin button {
+    border-radius: 48px;
+    background: #00C9E0;
+    border: none;
+    padding: 21px 57px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Larsseit;
+    transition: .3s;
+}
+@mixin headerLine{
+    position: absolute;
+    right: -15px;
+    top: 48%;
+    width: 30px;
+    height: 2px;
+    border-radius: 16px;
+    background: #FFF;
+    transition: .1s;
 }
