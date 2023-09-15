@@ -83,11 +83,10 @@ header{
                 display: flex;
             }
             .burger_lines{
-                @include parametrs(none,row,normal,normal,nowrap);
+                @include parametrs(none,column,normal,normal,nowrap);
                 @media screen and (max-width:1023px) {
                     display: flex;
                 }
-                flex-direction: column;
                 gap: 8px;
                 position: absolute;
                 right: 40px;

@@ -54,7 +54,7 @@ const input = document.querySelector(".input")
 const img = document.querySelector(".search")
 
 document.body.addEventListener("click", function(event) {
-    if (event.target !== img && input) input.classList.remove('active');
+    if (event.target !== img && event.target !== input) input.classList.remove('active');
 });
 
 const swiper = new Swiper('.swiper', {
