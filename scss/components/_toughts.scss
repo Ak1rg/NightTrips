@@ -5,7 +5,8 @@
     .toughts__container{
         max-width: 1680px;
         margin: 0 auto;
-        border-radius: 8px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
         background: $black;
         .toughts_box{
             position: relative;

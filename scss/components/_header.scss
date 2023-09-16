@@ -43,6 +43,9 @@ header{
                         transform: scaleX(1);
                         transition: .3s;
                     }
+                    img{
+                        cursor: pointer;
+                    }
                 }
                 .header__button{
                     position: relative;
@@ -84,7 +87,7 @@ header{
         }
         .right-menu:hover{
             transform: translateX(0%);
-            transition: .2s;
+            transition: .6s;
         }
         .right-menu{
             position: fixed;
@@ -96,7 +99,7 @@ header{
             right: 0px;
             z-index: 20;
             transform: translateX(90%);
-            transition: .2s;
+            transition: .6s;
             .leftLine{
                 width: 30px;
                 height: 80px;
@@ -189,6 +192,7 @@ header{
                     @include whiteText(14px,400,100%,1.6px,$Larr);
                     text-transform: uppercase;
                     background:$black;
+                    transition: .3s;
                     @media screen and (max-width:1023px) {
                         height: 60px;
                         border-radius: 0px;

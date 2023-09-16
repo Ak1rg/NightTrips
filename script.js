@@ -71,6 +71,7 @@ document.body.addEventListener("click", function(event) {
 
 const swiper = new Swiper('.swiper', {
     loop: false,
+    spaceBetween: 30,
     breakpoints:{
         1000:{
             allowTouchMove: false,

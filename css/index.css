@@ -88,6 +88,9 @@ header .container .head .menu .header-search input.active {
   transform: scaleX(1);
   transition: 0.3s;
 }
+header .container .head .menu .header-search img {
+  cursor: pointer;
+}
 header .container .head .menu .header__button {
   position: relative;
 }
@@ -153,7 +156,7 @@ header .container .right-menu.active {
 }
 header .container .right-menu:hover {
   transform: translateX(0%);
-  transition: 0.2s;
+  transition: 0.6s;
 }
 header .container .right-menu {
   position: fixed;
@@ -162,7 +165,7 @@ header .container .right-menu {
   right: 0px;
   z-index: 20;
   transform: translateX(90%);
-  transition: 0.2s;
+  transition: 0.6s;
 }
 @media screen and (max-width: 1023px) {
   header .container .right-menu {
@@ -310,6 +313,7 @@ header .container .burger-menu .burger_buttons a {
   letter-spacing: 1.6px;
   text-transform: uppercase;
   background: #011627;
+  transition: 0.3s;
 }
 @media screen and (max-width: 1023px) {
   header .container .burger-menu .burger_buttons a {
@@ -1049,6 +1053,7 @@ header .container .header_scroll .icons_line img {
   align-items: center;
   flex-wrap: nowrap;
   padding: 25px 30px;
+  transition: 0.4s;
   background-color: white;
   border-radius: 10px;
   position: absolute;
@@ -1077,6 +1082,11 @@ header .container .header_scroll .icons_line img {
     left: -12px;
   }
 }
+@media screen and (max-width: 1023px) {
+  .about_us .container .about_usBox .about_us-Right .about_us-photos div h5 {
+    transition: 0.5s;
+  }
+}
 .about_us .container .about_usBox .about_us-Right .about_us-photos div h5 span {
   color: #FFF;
   font-family: Larsseit;
@@ -1101,17 +1111,33 @@ header .container .header_scroll .icons_line img {
   opacity: 1;
   transition: 0.3s;
 }
+@media screen and (max-width: 1023px) {
+  .about_us .container .about_usBox .about_us-Right .about_us-photos div:hover h5 {
+    transition: 0.5s;
+  }
+}
 .about_us .container .about_usBox .about_us-Right .about_us-photos div:hover img {
   opacity: 1;
   transition: 0.3s;
 }
+@media screen and (max-width: 1023px) {
+  .about_us .container .about_usBox .about_us-Right .about_us-photos div:hover img {
+    transition: 0.5s;
+  }
+}
 .about_us .container .about_usBox .about_us-Right .about_us-photos img {
   max-width: 100%;
   opacity: 0.4;
+  transition: 0.4s;
 }
 @media screen and (max-width: 1001px) {
   .about_us .container .about_usBox .about_us-Right .about_us-photos img {
-    opacity: 0.6;
+    opacity: 0.5;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .about_us .container .about_usBox .about_us-Right .about_us-photos img {
+    transition: 0.5s;
   }
 }
 .about_us .container .about_usBox .about_us-Right .about_us-dots {
@@ -1130,7 +1156,8 @@ header .container .header_scroll .icons_line img {
 .toughts .toughts__container {
   max-width: 1680px;
   margin: 0 auto;
-  border-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
   background: #011627;
 }
 .toughts .toughts__container .toughts_box {

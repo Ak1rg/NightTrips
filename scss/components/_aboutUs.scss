@@ -103,6 +103,10 @@
                                 font-size: 12px;
                                 left: -12px;
                             }
+                            @media screen and (max-width:1023px){
+                                transition: .5s;
+                            }
+                            transition: .4s;
                             background-color: white;
                             border-radius: 10px;
                             position: absolute;
@@ -122,17 +126,27 @@
                         h5{
                             opacity: 1;
                             transition: .3s;
+                            @media screen and (max-width:1023px){
+                                transition: .5s;
+                            }
                         }
                         img{
                             opacity: 1;
                             transition: .3s;
+                            @media screen and (max-width:1023px){
+                                transition: .5s;
+                            }
                         }
                     }
                     img{
                         max-width: 100%;
                         opacity: .4;
+                        transition: .4s;
                         @media screen and (max-width:1001px){
-                            opacity: .6;
+                            opacity: .5;
+                        }
+                        @media screen and (max-width:1023px){
+                            transition: .5s;
                         }
                     }
                 }
