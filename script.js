@@ -116,9 +116,11 @@ $win.on("scroll", function () {
     
     if (top > limit) {
         tgl(true);
+        document.querySelector(".input").classList.remove('active');
     } else {
         tgl(false);
         document.querySelector(".right-menu").classList.remove('left');
+
     }
 });
 
