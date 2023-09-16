@@ -31,24 +31,14 @@ let x = window.matchMedia("(min-width: 1000px)");
 burger(".burger_lines",".burger_buttons",".burger_lines","","")
 burger(".header__button",".burger_buttons",".burger-menu",".header_line",".header_line2")
 
+document.querySelector(".right-menu").classList.remove("active")
 
-document.body.addEventListener("click", () => {
-    if (window.matchMedia("(min-width: 1920px)").matches) {
-        document.body.addEventListener("click", function(e) {
-            if (e.target !== button) clickMenu();
-        });
-    } 
-    if (window.matchMedia("(min-width: 1000px)").matches) {
-        document.body.addEventListener("click", function(e) {
-            if (e.target !== button) ;
-        });
-    } 
-});
 
 
 document.querySelectorAll("#button").forEach(item => {
     item.addEventListener('click', () => {
         clickMenu()
+        document.querySelector(".right-menu").classList.remove('left');
     })
 })
 
@@ -110,12 +100,13 @@ $('a[href^="#"').on('click', function() {
     return false;
 });
 
+
 let $win = $(window),
 	$fixed = $(".right-menu"),
 	limit = 175;
 
 function tgl (state) {
-    $fixed.toggleClass("hidden", state);
+    $fixed.toggleClass("active", state);
     clickMenu()
 }
 
@@ -123,9 +114,24 @@ $win.on("scroll", function () {
 	let top = $win.scrollTop();
 
     
-    if (top < limit) {
+    if (top > limit) {
         tgl(true);
     } else {
         tgl(false);
+        document.querySelector(".right-menu").classList.remove('left');
     }
+});
+
+document.querySelector(".leftLine").addEventListener("click",()=> {
+    $(".right-menu").toggleClass("left")
+    setTimeout(() => {
+        $('.button').css('pointer-events','auto')
+    },650)
+})
+
+document.body.addEventListener("click", function(event) {
+    let menu = this.querySelector(".right-menu")
+    let line = this.querySelector(".leftLine")
+    let miniLine = this.querySelector(".right-menu_line")
+    if (event.target !== line && event.target !== menu) menu.classList.remove('left');
 });

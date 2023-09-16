@@ -78,23 +78,18 @@ header{
                 display: flex;
             }
         }
-        .right-menu.hidden{
-            display: none;
-        }
         .right-menu.active{
-            transform: translateX(90%);
-            transition: .2s;
+            @media screen and (max-width:1023px) {
+                display: flex;
+            }
         }
-        .right-menu:hover{
+        .right-menu.left{
             transform: translateX(0%);
             transition: .6s;
         }
         .right-menu{
             position: fixed;
             display: none;
-            @media screen and (max-width:1023px) {
-                display: flex;
-            }
             top: 50px;
             right: 0px;
             z-index: 20;
@@ -106,7 +101,7 @@ header{
                 border-bottom-left-radius: 5px;
                 border-top-left-radius: 5px;
                 background-color: $black;
-                border: 1px solid black;
+                border: 1px solid $blue;
                 @include parametrs(flex,column,center,center,nowrap);
                 gap: 15px;
                 .right-menu_line{
@@ -129,6 +124,7 @@ header{
                     background:$black;
                     height: 60px;
                     border: 1px solid black;
+                    pointer-events: none;
                 }
             }
         }

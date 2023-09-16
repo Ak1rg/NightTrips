@@ -147,14 +147,12 @@ header .container .head .menu .header__button .header_line2.active {
 header .container .head .burger-menu.active {
   display: flex;
 }
-header .container .right-menu.hidden {
-  display: none;
+@media screen and (max-width: 1023px) {
+  header .container .right-menu.active {
+    display: flex;
+  }
 }
-header .container .right-menu.active {
-  transform: translateX(90%);
-  transition: 0.2s;
-}
-header .container .right-menu:hover {
+header .container .right-menu.left {
   transform: translateX(0%);
   transition: 0.6s;
 }
@@ -167,18 +165,13 @@ header .container .right-menu {
   transform: translateX(90%);
   transition: 0.6s;
 }
-@media screen and (max-width: 1023px) {
-  header .container .right-menu {
-    display: flex;
-  }
-}
 header .container .right-menu .leftLine {
   width: 30px;
   height: 80px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   background-color: #011627;
-  border: 1px solid black;
+  border: 1px solid #41EAD4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -220,6 +213,7 @@ header .container .right-menu .right_buttons a {
   background: #011627;
   height: 60px;
   border: 1px solid black;
+  pointer-events: none;
 }
 header .container .burger-menu {
   display: none;
