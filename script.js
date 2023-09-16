@@ -27,6 +27,15 @@ function slide (number,text,id,e,el,ele){
 
 const button = document.getElementById("menu-button");
 let x = window.matchMedia("(min-width: 1000px)");
+const input = document.querySelector(".input")
+const img = document.querySelector(".search")
+
+document.body.addEventListener("click", function(event) {
+    if (event.target !== img && event.target !== input) input.classList.remove('active');
+    let menu = this.querySelector(".right-menu")
+    let line = this.querySelector(".leftLine")
+    if (event.target !== line && event.target !== menu) menu.classList.remove('left');
+});
 
 burger(".burger_lines",".burger_buttons",".burger_lines","","")
 burger(".header__button",".burger_buttons",".burger-menu",".header_line",".header_line2")
@@ -52,12 +61,6 @@ document.querySelector(".search").addEventListener("click", () => {
     clickMenu();
 });
 
-const input = document.querySelector(".input")
-const img = document.querySelector(".search")
-
-document.body.addEventListener("click", function(event) {
-    if (event.target !== img && event.target !== input) input.classList.remove('active');
-});
 
 const swiper = new Swiper('.swiper', {
     loop: false,
@@ -130,10 +133,3 @@ document.querySelector(".leftLine").addEventListener("click",()=> {
         $('.button').css('pointer-events','auto')
     },650)
 })
-
-document.body.addEventListener("click", function(event) {
-    let menu = this.querySelector(".right-menu")
-    let line = this.querySelector(".leftLine")
-    let miniLine = this.querySelector(".right-menu_line")
-    if (event.target !== line && event.target !== menu) menu.classList.remove('left');
-});
